@@ -1,6 +1,19 @@
 # hdpsr
 ICPP22hdpsr
 
+## Installation
+You should prepare a machine running Ubuntu16.04 and configure the Golang environment in advance.
+
+To download the project:
+```
+git clone https://github.com/icpp22hdpsr/hdpsr.git
+```
+
+Then download the module:
+```
+go mod tidy
+```
+
 ## Project Architecture:
 <!-- - `examples/main.go` contains the main func. For each run,  operate among "encode", "read", ... -->
 
