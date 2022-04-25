@@ -92,6 +92,7 @@ sha256sum {input file path}
 ```
 ```
 sha256sum {output file path}
+```
 
 6. To delete the file in storage (currently irreversible, we are working on that):
 ```
@@ -107,7 +108,9 @@ sha256sum {output file path}
 ```
 ./main -md fsr -fmd diskFail -fn 1 -f {input file path}
 ```
+```
 use `fn` to simulate the failed number of disks (default is 0), for example, `-fn 2` simluates shutdown of arbitrary two disks
+```
 
 9. To recover a file via partial-stripe-repair
 ```
@@ -118,6 +121,17 @@ use `fn` to simulate the failed number of disks (default is 0), for example, `-f
 ```
 ```
 ./main -md psrpa -fmd diskFail -fn 1 -f {input file path}
+```
+
+10. To recover a file with multi-disk failures via partial-stripe-repair
+```
+./main -md mpsrap -fmd diskFail -fn 1 -f {input file path}
+```
+```
+./main -md mpsras -fmd diskFail -fn 1 -f {input file path}
+```
+```
+./main -md mpsrpa -fmd diskFail -fn 1 -f {input file path}
 ```
 
 ## CLI parameters
